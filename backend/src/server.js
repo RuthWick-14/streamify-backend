@@ -1,17 +1,18 @@
 // require('dotenv').config({path: './env'})  // it ruins the consistency of code so alternate approach is i line 6-8
 
-import dotenv from "dotenv"
+// import dotenv from "dotenv"
+import "dotenv/config"
 import connectDB from "./db/server.js";
 import {app} from "./app.js"
 
-dotenv.config({
-    path : "./env"
-})
+// dotenv.config({
+//     path : "./env"
+// })
 
 connectDB()
 .then(()=>{
     app.listen(process.env.PORT || 8000, ()=>{
-        console.log`Server is running at port: ${process.env.PORT}`;
+        console.log(`Server is running at port : ${process.env.PORT}`);
     })
 })
 .catch((error)=>{
