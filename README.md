@@ -153,7 +153,6 @@ streamify/
 ├── middleware/
 ├── utils/
 ├── config/
-├── Dockerfile
 └── server.js
 ```
 
